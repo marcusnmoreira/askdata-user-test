@@ -13,6 +13,9 @@ export const DropdownWrapper = styled.div`
     color: #374151;
     margin-right: 8px;
   }
+  > div {
+    position: relative;
+  }
 `;
 
 export const Button = styled.button`
@@ -47,9 +50,6 @@ export const DropdownListWrapper = styled.div`
   margin-top: 4px;
   inset: auto 0 auto auto;
 
-  //width: 180px;
-  //height: 176px;
-
   /* white */
   background: var(--primaryWhite);
 
@@ -60,4 +60,12 @@ export const DropdownListWrapper = styled.div`
   /* shadow/sm */
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
   border-radius: 8px;
+
+  ul {
+    list-style-type: none;
+  }
+
+  li:not(:first-child) {
+    margin-top: 8px;
+  }
 `;
